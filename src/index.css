@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page-bg: #000000;
+  --page-text: #fbf9e4;
+  --page-text-muted: rgba(251, 249, 228, 0.72);
+  --page-surface: rgba(255, 255, 255, 0.04);
+  --page-border: rgba(255, 255, 255, 0.1);
+  --page-accent: #5b88b2;
+  color: var(--page-text);
+  background: var(--page-bg);
+  color-scheme: dark;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme='light'] {
+  --page-bg: #f2f5f8;
+  --page-text: #07111f;
+  --page-text-muted: rgba(7, 17, 31, 0.72);
+  --page-surface: rgba(255, 255, 255, 0.72);
+  --page-border: rgba(7, 17, 31, 0.08);
+  --page-accent: #122c4f;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--page-bg);
+  color: var(--page-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(91, 136, 178, 0.35);
+  color: #fbf9e4;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.glass-panel {
+  background: var(--page-surface);
+  border: 1px solid var(--page-border);
+  backdrop-filter: blur(24px);
+}
+
+.noise-overlay {
+  background-image: radial-gradient(rgba(251, 249, 228, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
