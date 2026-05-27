@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Analysis</title>
+    <meta
+      name="description"
+      content="Detailed analysis view for a selected project, including overview, problem, design, development, challenges, results, and learnings."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body data-page="analysis">
+    <div class="background-orb orb-a"></div>
+    <div class="background-orb orb-b"></div>
+
+    <main class="shell">
+      <header class="topbar">
+        <a class="back-link" href="index.html">Back to projects</a>
+        <span class="pill" id="projectTag">Case study</span>
+      </header>
+
+      <section class="card analysis-hero">
+        <p class="eyebrow" id="projectCategory">Project analysis</p>
+        <h1 id="projectTitle">Loading project...</h1>
+        <p class="hero-copy" id="projectSummary"></p>
+      </section>
+
+      <section class="analysis-layout">
+        <nav class="sticky-nav card" aria-label="Project sections">
+          <a href="#overview">Overview</a>
+          <a href="#problem">Problem</a>
+          <a href="#design-process">Design Process</a>
+          <a href="#development">Development</a>
+          <a href="#challenges">Challenges</a>
+          <a href="#results">Results</a>
+          <a href="#learnings">Learnings</a>
+        </nav>
+
+        <article class="analysis-content" id="analysisContent"></article>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,13 +1,49 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      // Lightweight runtime error overlay to surface errors when the app fails to render
+      (function () {
+        function showError(message, stack) {
+          try {
+            var css = 'position:fixed;left:12px;right:12px;top:12px;padding:16px;border-radius:8px;background:#2b2b2b;color:#fff;z-index:99999;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;box-shadow:0 6px 24px rgba(0,0,0,0.6);white-space:pre-wrap;max-height:70vh;overflow:auto;';
+            var node = document.createElement('div');
+            node.id = 'dev-error-overlay';
+            node.setAttribute('style', css);
+            node.innerText = message + (stack ? '\n\n' + stack : '');
+            document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(node); });
+            if (document.body) document.body.appendChild(node);
+          } catch (e) {
+            /* ignore */
+          }
+        }
+
+        window.addEventListener('error', function (ev) {
+          showError(ev.message, ev.error && ev.error.stack ? ev.error.stack : ev.filename + ':' + ev.lineno + ':' + ev.colno);
+        });
+
+        window.addEventListener('unhandledrejection', function (ev) {
+          var reason = ev.reason && ev.reason.stack ? ev.reason.stack : String(ev.reason);
+          showError('Unhandled promise rejection: ' + reason, '');
+        });
+      })();
+    </script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>project-analysis</title>
+    <title>Project Analysis Archive</title>
+    <meta
+      name="description"
+      content="A simple archive site for showcasing project analyses, process notes, and outcomes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
