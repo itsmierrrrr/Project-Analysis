@@ -105,6 +105,33 @@ function renderAnalysisPage() {
       <p>${project.learnings}</p>
     </section>
   `;
+
+  // Ensure the title/hero section (`projectTitle`) is shown by default when opening the analysis page
+  const currentHash = window.location.hash;
+  const shouldShowTitle = !currentHash || currentHash === "" || currentHash === "#";
+
+  requestAnimationFrame(() => {
+    if (shouldShowTitle) {
+      const titleEl = document.getElementById("projectTitle");
+      if (titleEl) {
+        titleEl.scrollIntoView({ behavior: "auto" });
+        try {
+          history.replaceState(null, "", "#projectTitle");
+        } catch (e) {
+          // ignore history errors in older browsers or unusual environments
+        }
+      } else {
+        window.scrollTo(0, 0);
+      }
+    } else {
+      // If there is an explicit hash, ensure we scroll to that target after render
+      const targetId = currentHash.replace("#", "");
+      if (targetId) {
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) targetEl.scrollIntoView({ behavior: "auto" });
+      }
+    }
+  });
 }
 
 const page = document.body.dataset.page;

@@ -109,9 +109,6 @@ function HomePage() {
             <button className="button button-primary" type="button" onClick={() => scrollToSectionById("projects", reduceMotion)}>
               Explore projects
             </button>
-            <button className="button button-secondary" type="button" onClick={() => scrollToSectionById("overview", reduceMotion)}>
-              See the structure
-            </button>
           </div>
         </motion.div>
       </section>
@@ -168,22 +165,64 @@ function HomePage() {
       </motion.section>
 
       <motion.section className="contact-section" id="contact" variants={riseVariants}>
-        <div>
+        <div className="contact-heading">
           <p className="eyebrow">Contact</p>
-          <h2>Want to talk about a project or review?</h2>
+          <h2>Let us build something remarkable</h2>
+          <p className="section-note">Share your vision and timeline. I usually reply within one business day.</p>
         </div>
-        <div className="contact-grid">
-          <div className="contact-box neo-inset">
-            <span>Email</span>
-            <strong>hello@example.com</strong>
-          </div>
-          <div className="contact-box neo-inset">
-            <span>Response</span>
-            <strong>Within 1-2 business days</strong>
-          </div>
-          <div className="contact-box neo-inset">
-            <span>Focus</span>
-            <strong>UI, product, and case studies</strong>
+
+        <div className="contact-grid two-column">
+          <form className="contact-form card neo-inset" onSubmit={(e) => e.preventDefault()}>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" />
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" />
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" placeholder="Tell me about your project..."></textarea>
+            </label>
+
+            <div className="form-actions">
+              <button className="button button-primary" type="submit">
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ marginLeft: 8 }} xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M21 3L2 12l6 2 2 6 11-18z" fill="currentColor" />
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <div className="contact-info">
+            <div className="contact-box neo-inset">
+              <div className="icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 6.5C3 5.11929 4.11929 4 5.5 4h13C20.8807 4 22 5.11929 22 6.5v11c0 1.3807-1.1193 2.5-2.5 2.5h-13C4.11929 20 3 18.8807 3 17.5v-11zM5.5 6L12 10.2 18.5 6" fill="currentColor" />
+                </svg>
+              </div>
+              <div>
+                <span>Email</span>
+                <strong>mihir.s.sawant17@gmail.com</strong>
+              </div>
+            </div>
+
+            <div className="contact-box neo-inset">
+              <div className="icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13401 2 5 5.13401 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13401 15.866 2 12 2Z" fill="currentColor" />
+                  <path d="M12 11.25C10.4812 11.25 9.25 10.0188 9.25 8.5C9.25 6.98122 10.4812 5.75 12 5.75C13.5188 5.75 14.75 6.98122 14.75 8.5C14.75 10.0188 13.5188 11.25 12 11.25Z" fill="#081421" />
+                </svg>
+              </div>
+              <div>
+                <span>Location</span>
+                <strong>Mumbai, India</strong>
+              </div>
+            </div>
           </div>
         </div>
       </motion.section>
@@ -195,6 +234,19 @@ function AnalysisPage() {
   const { slug } = useParams();
   const project = getProject(slug);
   const reduceMotion = useReducedMotion();
+
+  // Force the analysis page to start at the title/hero section by default.
+  // This overrides any existing hash so the project title always shows first.
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      scrollToSectionById("projectTitle", reduceMotion);
+      try {
+        history.replaceState(null, "", "#projectTitle");
+      } catch (e) {
+        // ignore
+      }
+    });
+  }, [slug]);
 
   const sections = [
     ["Overview", "overview"],
@@ -260,7 +312,7 @@ function AnalysisPage() {
 
       <motion.section className="card analysis-hero glass-surface" variants={riseVariants}>
         <p className="eyebrow">{project.category}</p>
-        <h1>{project.title}</h1>
+        <h1 id="projectTitle">{project.title}</h1>
         <p className="hero-copy">{project.summary}</p>
       </motion.section>
 
