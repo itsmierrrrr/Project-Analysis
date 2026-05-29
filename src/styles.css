@@ -81,6 +81,10 @@ a {
   border-radius: 3px;
 }
 
+/* Remove divider specifically between the projects heading and the project cards grid */
+.landing-page .section-heading + .project-grid::before {
+  display: none;
+}
 @media (max-width: 960px) {
   .landing-page .shell {
     gap: 36px;
