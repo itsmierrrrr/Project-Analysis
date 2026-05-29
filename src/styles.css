@@ -81,12 +81,6 @@ a {
   border-radius: 3px;
 }
 
-/* Remove divider before the projects section */
-.landing-page section#projects::before,
-.landing-page .project-grid::before {
-  display: none !important;
-}
-
 @media (max-width: 960px) {
   .landing-page .shell {
     gap: 36px;
