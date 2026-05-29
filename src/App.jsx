@@ -215,7 +215,7 @@ function HomePage() {
 
       <footer className="site-footer">
         <div className="shell-footer">
-          <small>© {new Date().getFullYear()} Project Analysis Archive. Built by Mihir Sawant. </small>
+          <small>© {new Date().getFullYear()} Project Analysis Archive. Built by Mihir Sawant. The Why Behind It.</small>
         </div>
       </footer>
     </AppShell>
