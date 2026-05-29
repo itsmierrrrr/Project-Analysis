@@ -113,38 +113,24 @@ function HomePage() {
         </motion.div>
       </section>
 
-      <motion.section className="overview-strip" id="overview" variants={riseVariants}>
-        <div>
-          <p className="eyebrow">Structure</p>
-          <h2>A clean format for every project.</h2>
-        </div>
-        <div className="strip-copy">
-          <p>
-            Each case study uses the same flow so your visitors can compare projects quickly and understand the process without searching for the important details.
-          </p>
-          <div className="strip-tags">
-            <span>Overview</span>
-            <span>Problem</span>
-            <span>Design Process</span>
-            <span>Development</span>
-            <span>Challenges</span>
-            <span>Results</span>
-            <span>Learnings</span>
-          </div>
-        </div>
-      </motion.section>
-
       <motion.section className="section-heading" id="projects" variants={riseVariants}>
         <div>
           <p className="eyebrow">Projects</p>
           <h2>Choose a project to inspect its analysis.</h2>
         </div>
         <p className="section-note">
-          Each card links to a dedicated case study page with the same section structure.
+          Each card links to a dedicated case study page with the same analysis flow.
         </p>
       </motion.section>
 
-      <motion.section className="project-grid" aria-live="polite" variants={pageVariants}>
+      <motion.section
+        className="project-grid"
+        aria-live="polite"
+        initial={false}
+        animate="show"
+        variants={pageVariants}
+        style={{ opacity: 1, filter: "none", transform: "none" }}
+      >
         {projects.map((project) => (
           <motion.article
             className="card project-card glass-surface"

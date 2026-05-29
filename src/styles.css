@@ -303,8 +303,7 @@ a {
   background: linear-gradient(145deg, rgba(24, 24, 24, 0.98), rgba(12, 12, 12, 0.98));
 }
 
-.stat-box span,
-.strip-tags span {
+.stat-box span {
   display: inline-block;
   color: var(--muted);
   font-size: 0.8rem;
@@ -316,38 +315,6 @@ a {
   display: block;
   margin-top: 8px;
   font-size: 1.05rem;
-}
-
-.overview-strip {
-  margin-top: 18px;
-  padding: clamp(24px, 3.5vw, 40px);
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  align-items: center;
-  text-align: center;
-}
-
-.strip-copy {
-  display: grid;
-  gap: 16px;
-}
-
-.strip-copy p {
-  margin-bottom: 0;
-}
-
-.strip-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.strip-tags span {
-  padding: 10px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(145deg, rgba(24, 24, 24, 0.95), rgba(10, 10, 10, 0.95));
 }
 
 .eyebrow {
@@ -813,7 +780,6 @@ h3 {
 
 /* Make other section headings match the large centered style */
 .section-heading h2,
-.overview-strip h2,
 .contact-section h2 {
   text-align: center;
   font-size: clamp(2rem, 6vw, 4rem);
@@ -1089,15 +1055,10 @@ h3 {
   .hero,
   .analysis-hero,
   .hero-aside,
-  .overview-strip,
   .project-card,
   .section-card,
   .sticky-nav,
   .meta-box {
     border-radius: 22px;
-  }
-
-  .overview-strip {
-    grid-template-columns: 1fr;
   }
 }
