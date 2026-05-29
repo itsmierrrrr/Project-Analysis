@@ -212,6 +212,12 @@ function HomePage() {
           </div>
         </div>
       </motion.section>
+
+      <footer className="site-footer">
+        <div className="shell-footer">
+          <small>© {new Date().getFullYear()} Project Analysis Archive. Built by Mihir Sawant. </small>
+        </div>
+      </footer>
     </AppShell>
   );
 }

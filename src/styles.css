@@ -763,6 +763,22 @@ h3 {
   box-shadow: none;
 }
 
+/* Landing page footer */
+.landing-page .site-footer {
+  margin-top: 28px;
+  padding: 18px 0 36px;
+  color: var(--muted);
+  text-align: center;
+}
+.landing-page .site-footer .shell-footer {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+.landing-page .site-footer small {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .analysis-nav button {
   border: 0;
   background: transparent;
