@@ -154,7 +154,7 @@ function HomePage() {
         <div className="contact-heading">
           <p className="eyebrow">Contact</p>
           <h2>Let us build something remarkable</h2>
-          <p className="section-note">Share your vision and timeline. I usually reply within one business day.</p>
+          <p className="section-note">Have a project in mind or just want to connect? I'm always interested in discussing new ideas, collaborations, and opportunities. </p>
         </div>
 
         <div className="contact-grid two-column">
@@ -224,12 +224,29 @@ function AnalysisPage() {
   // Force the analysis page to start at the title/hero section by default.
   // This overrides any existing hash so the project title always shows first.
   useEffect(() => {
+    // Wait a tick so layout and navs render, then compute offsets and jump
     requestAnimationFrame(() => {
-      scrollToSectionById("projectTitle", reduceMotion);
+      const target = document.getElementById("projectTitle");
+      if (!target) return;
+
+      const navEl = document.querySelector(".site-nav .nav-inner") || document.querySelector(".site-nav");
+      const topbarEl = document.querySelector(".topbar");
+      const navOffset = (navEl ? navEl.getBoundingClientRect().height : 0) + (topbarEl ? topbarEl.getBoundingClientRect().height : 0) + 24;
+
+      const targetY = target.getBoundingClientRect().top + window.scrollY - navOffset;
+      window.scrollTo({ top: Math.max(0, Math.round(targetY)), behavior: "auto" });
+
       try {
         history.replaceState(null, "", "#projectTitle");
       } catch (e) {
         // ignore
+      }
+      // ensure element receives focus for accessibility
+      try {
+        target.setAttribute("tabindex", "-1");
+        target.focus({ preventScroll: true });
+      } catch (e) {
+        // ignore focus errors
       }
     });
   }, [slug]);

@@ -621,17 +621,27 @@ h3 {
 
 .topbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  position: sticky;
-  top: 5px;
-  z-index: 200;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+  position: fixed; /* make it stick to the viewport left */
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%) !important; /* center vertically */
+  z-index: 320;
+  width: -moz-fit-content;
+  width: fit-content; /* shrink to fit inner elements */
+  min-width: 96px; /* ensure usable minimum */
+  height: auto; /* let height follow content */
+  max-height: calc(100vh - (var(--nav-height) + 32px)); /* but prevent overflowing viewport */
   background: linear-gradient(145deg, var(--surface-hi), var(--surface-lo));
-  padding: 6px 0;
-  border-radius: 10px;
+  padding: 8px;
+  border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.07);
   box-shadow: var(--shadow);
+  flex-direction: column;
+  overflow: auto;
 }
 
 .back-link {
@@ -645,15 +655,63 @@ h3 {
   margin-left: 12px;
 }
 
+/* Vertical sidebar nav when topbar is fixed to left */
+.topbar .analysis-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 0;
+}
+
+.topbar .analysis-nav button {
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+/* Push main content to the right so sidebar doesn't overlap */
+.analysis-layout {
+  margin-left: calc(96px + 24px); /* align with min-width + small gap */
+}
+
+@media (max-width: 960px) {
+  /* revert to top sticky header on small screens */
+  .topbar {
+    position: sticky;
+    left: 0;
+    top: 5px;
+    width: auto;
+    height: auto;
+    padding: 6px 0;
+    border-radius: 10px;
+    flex-direction: row;
+    align-items: center;
+    overflow: visible;
+    transform: none !important; /* ensure mobile header isn't vertically translated */
+  }
+
+  .topbar .analysis-nav {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-left: 12px;
+  }
+
+  .analysis-layout {
+    margin-left: 0;
+  }
+}
+
 /* Make analysis nav look like landing nav */
-.topbar > div {
-  width: min(1120px, calc(100% - 32px));
-  margin: 0 auto;
+  .topbar > div {
+  width: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 0 12px;
+  gap: 8px;
+  padding: 0 8px;
 }
 
 .analysis-nav button {
@@ -692,6 +750,17 @@ h3 {
 .back-fixed:hover,
 .back-fixed:focus-visible {
   transform: translateY(-2px);
+}
+
+/* When back-fixed is placed inside the sidebar (.topbar) make it flow with content */
+.topbar .back-fixed {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  width: calc(100% - 12px);
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: none;
 }
 
 .analysis-nav button {

@@ -1,66 +1,68 @@
 export const projects = [
   {
-    slug: "atlas",
-    title: "Atlas Dashboard",
-    category: "Analytics platform",
+    slug: "royale-bakes",
+    title: "Royale Bakes",
+    category: "E-Commerce Bakery",
     summary:
-      "A dashboard for tracking project metrics and turning scattered status updates into one clear workspace.",
+      "A modern online cake shop that allows customers to browse, customize, and order freshly baked cakes with a seamless shopping experience.",
     overview:
-      "Atlas Dashboard organizes project progress, key metrics, and team notes in one place so stakeholders can quickly understand what is happening without jumping between tools.",
+      "Royale Bakes is an e-commerce platform designed for cake lovers to explore a wide variety of cakes, place orders online, and schedule deliveries. The platform focuses on elegant presentation, smooth navigation, and a delightful purchasing journey.",
     problem:
-      "The team had progress scattered across documents, chats, and spreadsheets. That made status reviews slow and created confusion about what had been completed.",
+      "Traditional cake ordering often relies on phone calls or messaging, making customization, order tracking, and product discovery inconvenient. Customers needed a faster and more transparent way to browse and purchase cakes online.",
     designProcess: [
-      "Mapped the most common questions stakeholders ask during reviews.",
-      "Created a layout that surfaces summary cards first, then deeper detail on demand.",
-      "Used a restrained monochrome system to keep the interface calm and readable.",
-    ],
+    "Researched customer expectations for online bakery shopping and cake customization.",
+    "Designed a visually rich interface that highlights products through high-quality imagery and clear categories.",
+    "Created a streamlined checkout flow to reduce friction and improve conversion rates.",
+  ],
+
     development:
-      "Built the site as a responsive React experience with reusable project data so new case studies can be added without rewriting the layout.",
+      "Built as a responsive e-commerce website using modern web technologies, featuring product catalogs, shopping cart functionality, secure checkout, order management, and mobile-first optimization.",
     challenges: [
-      "Balancing visual polish with a simple implementation.",
-      "Keeping long-form content readable on smaller screens.",
-      "Making the navigation feel fast without adding complexity.",
-    ],
+    "Balancing visual appeal with fast page loading speeds.",
+    "Designing an intuitive cake customization and ordering experience.",
+    "Ensuring a consistent shopping experience across desktop and mobile devices.",
+  ],
     results:
-      "The archive makes each project easy to scan, while the analysis pages make it easy to explain decisions and outcomes in one narrative.",
+      "The platform provides customers with a convenient way to discover products, place orders, and schedule deliveries while helping the bakery manage online sales more efficiently.",
     learnings:
-      "A clear content structure matters more than fancy effects. The best portfolio pages help people understand your thinking, not just your screenshots.",
+      "Successful e-commerce experiences depend on trust, simplicity, and product presentation. Clear navigation and a frictionless checkout process significantly improve user engagement and purchase completion.",
     metrics: [
-      { label: "Focus", value: "Single source of truth" },
-      { label: "Format", value: "Landing page + case study" },
-      { label: "Goal", value: "Explain process clearly" },
-    ],
+    { label: "Products", value: "Custom & Ready-Made Cakes" },
+    { label: "Platform", value: "Online Bakery Store" },
+    { label: "Goal", value: "Increase Online Orders" },
+  ],
   },
   {
-    slug: "pulse",
-    title: "Pulse Notes",
-    category: "Study companion",
+    slug: "lessgoai",
+    title: "Lessgo ai",
+    category: "AI Trip Planner",
     summary:
-      "A lightweight note-taking concept that helps students collect ideas, tasks, and summaries in one focused place.",
+      "An AI-powered travel planning platform that generates personalized itineraries, destination suggestions, and travel recommendations based on user preferences.",
     overview:
-      "Pulse Notes was framed as a compact workspace for capturing study notes, organizing quick action items, and reviewing highlights before deadlines.",
+      "LessGoAI helps travelers plan trips effortlessly by using artificial intelligence to create customized travel itineraries. Users can discover destinations, explore attractions, and organize their journeys without spending hours researching.",
     problem:
-      "Students often jump between notebooks, docs, and messaging apps. The goal was to reduce that friction with a more focused note flow.",
+      "Planning a trip often requires searching across multiple websites for destinations, accommodations, activities, and schedules. This process can be time-consuming and overwhelming, especially for first-time travelers.",
     designProcess: [
-      "Started with a content-first layout that keeps writing and reading simple.",
-      "Grouped notes by type so users can quickly separate ideas from tasks.",
-      "Kept interaction states obvious and minimal to avoid distraction.",
-    ],
+    "Focused on a conversational and user-friendly experience for trip planning.",
+    "Designed a clean interface that highlights destinations, itineraries, and recommendations.",
+    "Structured the journey so users can move from inspiration to a complete travel plan with minimal effort.",
+  ],
     development:
-      "The implementation keeps the data model small and consistent, which makes the content easy to maintain and extend.",
+      "Built with a React + Vite frontend and a Node.js + Express backend, integrating AI-powered itinerary generation, destination recommendations, and responsive user interfaces optimized for all devices.",
     challenges: [
-      "Maintaining a strong hierarchy without overcrowding the page.",
-      "Deciding how much detail belongs on the landing page versus the analysis page.",
-    ],
+    "Generating travel plans that feel personalized rather than generic.",
+    "Presenting large amounts of travel information without overwhelming users.",
+    "Balancing AI-generated content with a fast and responsive user experience.",
+  ],
     results:
-      "The concept shows how a simple structure can still feel complete when each section answers a clear question.",
+      "The platform streamlines the travel planning process by transforming user preferences into organized itineraries, helping travelers make decisions faster and with greater confidence.",
     learnings:
-      "If the purpose is explanation, clarity should lead the design system from the start.",
+      "AI is most effective when it simplifies complex decisions. Clear presentation and personalization are just as important as the intelligence behind the recommendations.",
     metrics: [
-      { label: "Focus", value: "Study workflow" },
-      { label: "Audience", value: "Students" },
-      { label: "Priority", value: "Readability" },
-    ],
+    { label: "Focus", value: "Personalized Travel Planning" },
+    { label: "Technology", value: "AI-Powered Recommendations" },
+    { label: "Goal", value: "Simplify Trip Planning" },
+  ],
   },
   {
     slug: "forge",
