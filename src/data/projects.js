@@ -39,7 +39,7 @@ export const projects = [
     summary:
       "An AI-powered travel planning platform that generates personalized itineraries, destination suggestions, and travel recommendations based on user preferences.",
     overview:
-      "LessGoAI helps travelers plan trips effortlessly by using artificial intelligence to create customized travel itineraries. Users can discover destinations, explore attractions, and organize their journeys without spending hours researching.",
+      "Lessgo ai helps travelers plan trips effortlessly by using artificial intelligence to create customized travel itineraries. Users can discover destinations, explore attractions, and organize their journeys without spending hours researching.",
     problem:
       "Planning a trip often requires searching across multiple websites for destinations, accommodations, activities, and schedules. This process can be time-consuming and overwhelming, especially for first-time travelers.",
     designProcess: [
@@ -63,6 +63,37 @@ export const projects = [
     { label: "Technology", value: "AI-Powered Recommendations" },
     { label: "Goal", value: "Simplify Trip Planning" },
   ],
+  },
+  {
+    slug: "forge",
+    title: "Forge Studio",
+    category: "Creative workflow",
+    summary:
+      "A portfolio-style studio concept for presenting experiments, process snapshots, and polished final outcomes.",
+    overview:
+      "Forge Studio acts as a container for creative projects where the path to the final result is as important as the result itself.",
+    problem:
+      "Creative work is often presented only as a final screenshot, which hides the exploration and decisions that shaped the outcome.",
+    designProcess: [
+      "Split the analysis into the six sections the user needs for each project.",
+      "Designed the cards and analysis pages to feel related but not repetitive.",
+      "Used subtle motion and layered backgrounds to keep the site alive without becoming noisy.",
+    ],
+    development:
+      "The site is built from a single shared project dataset so the homepage and analysis pages stay consistent.",
+    challenges: [
+      "Making the site feel like a portfolio instead of a generic template.",
+      "Creating a route structure that stays simple in a static setup.",
+    ],
+    results:
+      "The archive reads like a small knowledge base for your projects, which makes it useful both for review and presentation.",
+    learnings:
+      "A strong archive page can double as a personal narrative about how you think and work.",
+    metrics: [
+      { label: "Format", value: "Case study archive" },
+      { label: "Structure", value: "Modular content" },
+      { label: "Tone", value: "Clean and intentional" },
+    ],
   },
   {
     slug: "forge",
