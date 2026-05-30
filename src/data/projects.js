@@ -2,7 +2,7 @@ export const projects = [
   {
     slug: "royale-bakes",
     title: "Royale Bakes",
-    category: "E-Commerce Bakery",
+    category: "E-Commerce Website",
     summary:
       "A modern online cake shop that allows customers to browse, customize, and order freshly baked cakes with a seamless shopping experience.",
     overview:
