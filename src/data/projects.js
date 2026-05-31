@@ -64,7 +64,7 @@ export const projects = [
     { label: "Goal", value: "Simplify Trip Planning" },
   ],
   },
-  {
+  /*{
     slug: "forge",
     title: "Forge Studio",
     category: "Creative workflow",
@@ -94,7 +94,7 @@ export const projects = [
       { label: "Structure", value: "Modular content" },
       { label: "Tone", value: "Clean and intentional" },
     ],
-  },
+  },*/
   
 ];
 
