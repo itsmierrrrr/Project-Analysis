@@ -81,7 +81,7 @@ function HomePage() {
       <motion.header className="site-nav" variants={riseVariants}>
         <div className="nav-inner card glass-surface">
           <button className="site-brand" type="button" onClick={() => scrollToSectionById("home", reduceMotion)}>
-            Project Analysis Archive
+            Project Analysis
           </button>
 
           <nav className="site-nav-links" aria-label="Primary">
@@ -100,7 +100,7 @@ function HomePage() {
 
       <section className="hero-splash card glass-surface" id="home">
         <motion.div className="hero-splash-content" variants={riseVariants}>
-          <p className="eyebrow">Project Analysis Archive</p>
+          <p className="eyebrow">Project Analysis</p>
           <h1>Project work, explained from idea to outcome.</h1>
           <p className="hero-copy">
             A polished archive for presenting each project with its overview, problem, design process, development, challenges, results, and learnings.
@@ -215,7 +215,7 @@ function HomePage() {
 
       <footer className="site-footer">
         <div className="shell-footer">
-          <small>© {new Date().getFullYear()} Project Analysis Archive. Built by Mihir Sawant. The Why Behind It.</small>
+          <small>© {new Date().getFullYear()} Project Analysis. Built by Mihir Sawant. The Why Behind It.</small>
         </div>
       </footer>
       <div className="footer-social">
