@@ -218,6 +218,44 @@ function HomePage() {
           <small>© {new Date().getFullYear()} Project Analysis Archive. Built by Mihir Sawant. The Why Behind It.</small>
         </div>
       </footer>
+      <div className="footer-social">
+        <div className="shell-footer">
+          <nav className="social-links" role="navigation" aria-label="Social links">
+            <a className="social-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.4" fill="none" />
+                <circle cx="12" cy="12" r="3" fill="currentColor" />
+                <circle cx="17.6" cy="6.4" r="0.9" fill="currentColor" />
+              </svg>
+            </a>
+
+            <a className="social-link" href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M15 8h2V5h-2c-1.7 0-3 1.3-3 3v1H10v3h2v7h3v-7h2.1l.4-3H15V8z" fill="currentColor" />
+              </svg>
+            </a>
+
+            <a className="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4z" fill="currentColor" />
+              </svg>
+            </a>
+
+            <a className="social-link" href="mailto:mihir.s.sawant17@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="3" y="5.5" width="18" height="13" rx="2" stroke="currentColor" strokeWidth="1.2" fill="none" />
+                <path d="M4 7l8 6 8-6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              </svg>
+            </a>
+
+            <a className="social-link" href="tel:+919999999999" aria-label="Call">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6.6 10.2c1.1 2.2 2.9 4 5.1 5.1l1.6-1.6c.3-.3.8-.4 1.2-.2 1.3.5 2.8.8 4.4.8.5 0 .9.4.9.9v2.6c0 .5-.4.9-.9.9C9.5 22 2 14.5 2 4.9 2 4.4 2.4 4 2.9 4H5.5c.5 0 .9.4.9.9 0 1.6.3 3.1.8 4.4.1.4 0 .9-.2 1.2L6.6 10.2z" fill="currentColor" />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </div>
     </AppShell>
   );
 }
