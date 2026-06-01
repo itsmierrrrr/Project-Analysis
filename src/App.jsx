@@ -221,7 +221,7 @@ function HomePage() {
       <div className="footer-social">
         <div className="shell-footer">
           <nav className="social-links" role="navigation" aria-label="Social links">
-            <a className="social-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a className="social-link" href="https://instagram.com/mihir.s_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.4" fill="none" />
                 <circle cx="12" cy="12" r="3" fill="currentColor" />
