@@ -206,7 +206,7 @@ function HomePage() {
               </div>
               <div>
                 <span>Location</span>
-                <strong>Mumbai, India</strong>
+                <strong>Mumbai, Maharashtra</strong>
               </div>
             </div>
           </div>
