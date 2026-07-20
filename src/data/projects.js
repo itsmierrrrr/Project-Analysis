@@ -64,6 +64,38 @@ export const projects = [
     { label: "Goal", value: "Simplify Trip Planning" },
   ],
   },
+  {
+  slug: "plantpulse",
+  title: "Plant Pulse",
+  category: "AI Plant Health Tracker",
+  summary:
+    "An AI-powered plant health monitoring platform that identifies plant diseases, analyzes plant conditions, and provides personalized care recommendations for healthier growth.",
+  overview:
+    "Plant Pulse helps plant owners monitor and improve plant health through AI-powered image analysis. Users can upload plant images, receive detailed health assessments, track previous analyses, and follow personalized care recommendations from an intuitive dashboard.",
+  problem:
+    "Plant diseases and nutrient deficiencies are often difficult to identify without expert knowledge. Many plant owners struggle to recognize early signs of stress, resulting in delayed treatment and reduced plant health.",
+  designProcess: [
+    "Designed a clean, dashboard-focused interface for effortless plant monitoring.",
+    "Created a simple image upload flow that delivers AI-powered health analysis in seconds.",
+    "Organized health reports, history, and care recommendations into an easy-to-navigate experience."
+  ],
+  development:
+    "Built with a React + Vite frontend and a Node.js + Express backend, integrating AI-powered plant analysis, secure authentication, analysis history, and a responsive interface optimized for desktop and mobile devices.",
+  challenges: [
+    "Providing accurate and meaningful plant health insights from uploaded images.",
+    "Presenting technical health information in a way that is easy for beginners to understand.",
+    "Maintaining a fast and seamless user experience while processing AI-powered image analysis."
+  ],
+  results:
+    "The platform enables users to detect plant health issues early, receive personalized care recommendations, and maintain a complete history of plant analyses, making plant care simpler and more effective.",
+  learnings:
+    "Building AI-powered applications requires balancing intelligent predictions with clear explanations. A well-designed user experience makes advanced AI insights accessible and actionable for everyday users.",
+  metrics: [
+    { label: "Focus", value: "AI Plant Health Monitoring" },
+    { label: "Technology", value: "AI Image Analysis" },
+    { label: "Goal", value: "Early Disease Detection & Smart Plant Care" },
+  ],
+  },
   /*{
     slug: "forge",
     title: "Forge Studio",
