@@ -92,7 +92,7 @@ export const projects = [
     "Building AI-powered applications requires balancing intelligent predictions with clear explanations. A well-designed user experience makes advanced AI insights accessible and actionable for everyday users.",
   metrics: [
     { label: "Focus", value: "AI Plant Health Monitoring" },
-    { label: "Technology", value: "AI Image Analysis" },
+    { label: "Technology", value: "AI Visual Inspection" },
     { label: "Goal", value: "Early Disease Detection & Smart Plant Care" },
   ],
   },
