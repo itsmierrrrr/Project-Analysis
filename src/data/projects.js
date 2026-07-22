@@ -82,10 +82,10 @@ export const projects = [
   development:
     "Built with a React + Vite frontend and a Node.js + Express backend, integrating AI-powered plant analysis, secure authentication, analysis history, and a responsive interface optimized for desktop and mobile devices.",
   challenges: [
-    "Providing accurate and meaningful plant health insights from uploaded images.",
-    "Presenting technical health information in a way that is easy for beginners to understand.",
-    "Maintaining a fast and seamless user experience while processing AI-powered image analysis."
-  ],
+  "Handling diverse image quality, lighting, and backgrounds while maintaining reliable analysis accuracy.",
+  "Providing personalized care recommendations based on AI results instead of generic plant advice.",
+  "Optimizing system performance to deliver fast analysis and a smooth user experience under varying workloads."
+],
   results:
     "The platform enables users to detect plant health issues early, receive personalized care recommendations, and maintain a complete history of plant analyses, making plant care simpler and more effective.",
   learnings:
