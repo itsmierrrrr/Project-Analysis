@@ -87,7 +87,7 @@ export const projects = [
   "Optimizing system performance to deliver fast analysis and a smooth user experience under varying workloads."
 ],
   results:
-    "The platform enables users to detect plant health issues early, receive personalized care recommendations, and maintain a complete history of plant analyses, making plant care simpler and more effective.",
+    "Users can quickly assess plant health, track previous analyses, and access AI-generated recommendations, reducing the time and effort required for effective plant maintenance.",
   learnings:
     "Building AI-powered applications requires balancing intelligent predictions with clear explanations. A well-designed user experience makes advanced AI insights accessible and actionable for everyday users.",
   metrics: [
