@@ -67,7 +67,7 @@ export const projects = [
   {
   slug: "plantpulse",
   title: "Plant Pulse",
-  category: "AI Plant Health Tracking application",
+  category: "AI Plant Health Tracker",
   summary:
     "An AI-powered plant health monitoring platform that identifies plant diseases, analyzes plant conditions, and provides personalized care recommendations for healthier growth.",
   overview:
