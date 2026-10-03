@@ -96,6 +96,64 @@ export const projects = [
     { label: "Goal", value: "Early Disease Detection & Smart Plant Care" },
   ],
   },
+  {
+  slug: "pae-artisan",
+
+  title: "PAE Artisan",
+
+  category: "Artisan marketplace",
+
+  summary:
+    "A digital platform concept designed to connect local artisans with customers while giving handcrafted products a modern and accessible online presence.",
+
+  overview:
+    "PAE Artisan creates a bridge between traditional craftsmanship and digital commerce by giving artisans a dedicated space to showcase their work, tell their stories, and reach a wider audience.",
+
+  problem:
+    "Many skilled artisans rely on traditional selling methods and have limited access to digital platforms, making it difficult to showcase their products, reach new customers, and build a recognizable online presence.",
+
+  designProcess: [
+
+    "Structured the experience around artisan discovery, product exploration, and simple customer interactions.",
+
+    "Designed product and artisan sections to give equal importance to the craftsmanship behind each product.",
+
+    "Used a clean visual hierarchy, warm presentation, and responsive layouts to create a marketplace that feels personal rather than transactional.",
+
+  ],
+
+  development:
+
+    "The application is built as a modular web experience where reusable components and structured project data keep the product, artisan, and marketplace sections consistent across the platform.",
+
+  challenges: [
+
+    "Creating a marketplace experience that feels authentic to handmade products instead of looking like a generic e-commerce template.",
+
+    "Balancing product information, artisan storytelling, and visual content without overwhelming the user.",
+
+    "Designing a responsive experience that remains intuitive across desktop and mobile devices.",
+
+  ],
+
+  results:
+
+    "The final experience presents artisan products in a more engaging digital format while giving users a clear path from discovering an artisan to exploring their handcrafted work.",
+
+  learnings:
+
+    "Designing for artisans taught me that a marketplace can be more than a product catalog. The story, process, and person behind the product can be an important part of the overall user experience.",
+
+  metrics: [
+
+    { label: "Format", value: "Artisan marketplace" },
+
+    { label: "Structure", value: "Product & artisan focused" },
+
+    { label: "Experience", value: "Story-driven commerce" },
+
+  ],
+}
   /*{
     slug: "forge",
     title: "Forge Studio",
