@@ -99,7 +99,7 @@ export const projects = [
   {
   slug: "pae-artisan",
 
-  title: "PAE Artisan",
+  title: "PAE",
 
   category: "Artisan marketplace",
 
