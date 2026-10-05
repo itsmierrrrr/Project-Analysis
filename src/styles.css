@@ -27,11 +27,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: "Manrope", system-ui, sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.07), transparent 22%),
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.05), transparent 28%),
-    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.04), transparent 20%),
-    linear-gradient(180deg, #0a0a0a 0%, #050505 100%);
+  background: var(--bg);
   color: var(--text);
 }
 
@@ -190,7 +186,7 @@ a {
   height: 360px;
   top: -110px;
   right: -130px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.14), transparent 64%);
+  background: transparent;
 }
 
 .orb-b {
@@ -198,7 +194,7 @@ a {
   height: 300px;
   left: -120px;
   bottom: 3%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.06), transparent 66%);
+  background: transparent;
 }
 
 .card {
